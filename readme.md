@@ -1,48 +1,62 @@
-# Smart Email Assistant Agent
+# smart_email_assistant
 
-## Project Description
+A Python-based Smart Email Assistant Agent that analyzes emails using rule-based logic.  
+It can classify emails, detect priority, check sentiment and tone, extract deadlines, suggest replies, and save email history locally.
 
-Smart Email Assistant Agent is a Python-based rule-based AI agent that helps users manage email overload. The user enters an email subject and body, and the agent analyzes the email to classify it, detect urgency, understand sentiment and tone, extract deadlines and action items, and suggest replies.
+## Project Overview
 
-This project does not require any API key. It runs locally using Python keyword-based and rule-based logic.
+The **smart_email_assistant** is a beginner-friendly Python project designed to help users manage emails more effectively.  
+The user enters an email subject and body, and the system analyzes the email using keyword-based rules.
+
+This project does not use any paid API or external AI model. It runs locally using Python.
 
 ## Real-World Problem
 
-Students and workers receive many emails every day. Important emails from professors, classmates, or workplaces may get buried under promotions, newsletters, and spam messages. Reading every email manually takes time, and writing replies can also be difficult.
+Students and workers receive many emails every day. Some emails are urgent, some are academic, some are meeting-related, and some may be spam or promotional messages.
 
-This project helps users quickly identify important emails and respond faster.
+Because of too many emails, important messages can be missed. This project helps by quickly identifying the email type, priority, sentiment, deadline, and possible reply.
 
-## Agent Model: Observe, Think, Act
+## System Diagram
 
-### Observe
-The agent reads the email subject and body and prepares the text for analysis.
+![System Diagram](assets/system_diagram.png)
 
-### Think
-The agent uses weighted keyword scoring and rule-based logic to classify the email. It also detects priority, sentiment, tone, deadlines, action items, and important entities.
+## Agent Flow: Observe, Think, Act
 
-### Act
-The agent displays the result, suggests replies, answers follow-up questions, and saves email history locally.
+This project follows an agent-style workflow:
+
+### 1. Observe
+
+The system observes the email by reading the subject and body.  
+It preprocesses the text and identifies useful information such as keywords, dates, names, and email addresses.
+
+### 2. Think
+
+The system thinks using a rule-based analysis engine.  
+It classifies the email category, detects priority, checks sentiment and tone, extracts deadlines and action items, and calculates a confidence score.
+
+### 3. Act
+
+The system acts by generating a summary, suggesting replies, answering follow-up questions, and saving the result in a JSON history file.
 
 ## Features
 
-- Email classification
-- Confidence score
+- Email category classification
 - Priority detection
-- Sentiment detection
+- Sentiment analysis
 - Tone detection
 - Deadline extraction
 - Action item extraction
 - Named entity detection
-- Suggested reply generation
-- Follow-up Q&A
+- One-sentence email summary
+- Suggested replies
+- Follow-up question answering
 - Email history viewer
 - Inbox statistics dashboard
 - JSON logging
-- No API key required
 
 ## Email Categories
 
-The agent classifies emails into these categories:
+The system can classify emails into categories such as:
 
 - Urgent
 - Assignment/Study
@@ -57,26 +71,63 @@ The agent classifies emails into these categories:
 - Python
 - Regular Expressions
 - JSON
-- Rich library for better terminal output
+- Rule-based logic
+- Keyword matching
+- Rich library for terminal display
 
-## How to Run
+## How to Run the Project
 
-Install Rich for better terminal output:
+First, install the required library:
 
 ```bash
-python3 -m pip install rich
+pip install rich
+```
 
-## Example Use Case
+Then run the Python file:
 
- student receives an email from a professor about an assignment deadline. The agent reads the subject and body, classifies it as Assignment/Study or Urgent, detects the priority, finds the deadline, and suggests a reply.
+```bash
+python3 smart_email_assistant.py
+```
 
-Future Improvement
+## Project Files
 
-In the future, this project can be connected to Gmail API so that:
+```text
+smart-email-assistant-agent/
+│
+├── smart_email_assistant.py
+├── readme.md
+└── assets/
+    └── system_diagram.png
+```
 
-Spam emails can be moved to the spam folder
-High-priority emails can be labeled and saved as drafts
-Low-priority emails can be labeled for later review
+## Example Input
 
-Author
+```text
+Subject: Assignment 3 due next Friday
+
+Body:
+Dear students, please remember that Assignment 3 is due next Friday.
+Please review the chapters before submission.
+```
+
+## Example Output
+
+```text
+Category: Assignment/Study
+Priority: Medium
+Sentiment: Neutral
+Tone: Formal
+Deadline: next Friday
+Suggested Reply: Thank you for the reminder. I will complete and submit it on time.
+```
+
+## Why This Project Is Useful
+
+This project is useful because it saves time and helps users understand emails faster.  
+Instead of reading every email carefully, the assistant gives a quick analysis and suggested action.
+
+It can be helpful for students, office workers, and anyone who receives many emails daily.
+
+## Author
+
 Arbin Bhattarai

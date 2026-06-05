@@ -1,4 +1,4 @@
-# smart_email_assistant
+# Smart_email_assistant
 
 A Python-based Smart Email Assistant Agent that analyzes emails using rule-based logic.  
 It can classify emails, detect priority, check sentiment and tone, extract deadlines, suggest replies, and save email history locally.
@@ -16,9 +16,6 @@ Students and workers receive many emails every day. Some emails are urgent, some
 
 Because of too many emails, important messages can be missed. This project helps by quickly identifying the email type, priority, sentiment, deadline, and possible reply.
 
-## System Diagram
-
-![System Diagram](assets/system_diagram.png)
 
 ## Agent Flow: Observe, Think, Act
 
@@ -96,8 +93,7 @@ smart-email-assistant-agent/
 │
 ├── smart_email_assistant.py
 ├── readme.md
-└── assets/
-    └── system_diagram.png
+
 ```
 
 ## Example Input
